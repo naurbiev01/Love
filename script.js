@@ -222,16 +222,22 @@ function showSlide() {
   const photo = document.getElementById("photo");
   const text = document.getElementById("text");
 
+  // сначала скрываем текст
+  text.style.display = "none";
+
+  // устанавливаем картинку
   photo.src = data[index].img;
 
-  // проверяем есть ли текст
-  if (data[index].text) {
-    text.innerText = data[index].text;
-    text.style.display = "block";
-  } else {
-    text.innerText = "";
-    text.style.display = "none";
-  }
+  // ждём, пока картинка загрузится
+  photo.onload = () => {
+    if (data[index].text) {
+      text.innerText = "Love is… " + data[index].text;
+      text.style.display = "block";
+    } else {
+      text.innerText = "";
+      text.style.display = "none";
+    }
+  };
 
   updateProgress();
 }
