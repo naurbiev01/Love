@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- WELCOME SCREEN -->
+  <div id="welcome">
+    <h1>Для тебя, моя Ками❤️</h1>
+    <button onclick="startExperience()">Начать</button>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="app" class="hidden">
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div class="story">
+
+      <div class="card" id="card">
+        <img id="photo" src="" alt="">
+        <div class="caption">
+          <h3>LOVE IS</h3>
+          <p id="text"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="controls">
+      <button onclick="prev()">⬅️</button>
+      <button onclick="next()">➡️</button>
+    </div>
+
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
